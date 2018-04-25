@@ -6,9 +6,13 @@
 
 ![MobileNet-SSD](https://github.com/tanakataiki/ssd_kerasV2/blob/master/example/MobileNet-SSD.gif)
 
-### VGG16-SSD
+### VGG16-SSD300
 
 ![VGG16-SSD](https://github.com/tanakataiki/ssd_kerasV2/blob/master/example/VGG16-SSD.gif)
+
+Coming Soon below
+
+VGG16-SSD512
 
 FeatureFused-SSD
 
