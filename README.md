@@ -12,13 +12,15 @@
 
 Coming Soon below
 
+VGG19-SSD300
+
 VGG16-SSD512
 
-FeatureFused-SSD
+FeatureFused-SSD300
 
-Xcception-SSD(TanakaOriginalVer)
+Xcception-SSD300(TanakaOriginalVer)
 
-MobileNetV2-SSD(Maybe...)
+MobileNetV2-SSD300(Maybe...)
 
 
 ## Weights Are Available From Here
