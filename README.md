@@ -45,3 +45,9 @@ conda install numpy
 conda install scipy
 
 pip install --upgrade keras opencv-python pillow matplotlib h5py
+
+
+## Reference
+https://github.com/rykov8/ssd_keras/blob/master/ssd.py
+
+https://github.com/weiliu89/caffe/tree/ssd
