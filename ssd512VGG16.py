@@ -1,6 +1,5 @@
 import keras.backend as K
 from keras.layers import Activation
-from keras.layers import AtrousConvolution2D
 from keras.layers import Conv2D
 from keras.layers import Dense
 from keras.layers import Flatten
@@ -10,12 +9,11 @@ from keras.layers import MaxPooling2D
 from keras.layers import concatenate
 from keras.layers import Reshape
 from keras.layers import ZeroPadding2D
-from keras.layers.recurrent import GRU
-from keras.layers.wrappers import Bidirectional
 from keras.layers.core import  Dropout
 from keras.models import Model
 from ssd_layers import Normalize
 from ssd_layers import PriorBox
+from keras.applications import VGG16
 
 
 
@@ -32,20 +30,16 @@ def SSD(input_shape, num_classes):
     net = {}
     # Block 1
     input_tensor = Input(shape=input_shape)
+    input_shape = (input_shape[1], input_shape[0], 3)
     img_size = (input_shape[1], input_shape[0])
-    net['input'] = input_tensor
-    net['conv1_1'] = Conv2D(64, (3, 3),activation='relu',padding='same',name='conv1_1')(net['input'])
-    net['conv1_2'] = Conv2D(64, (3, 3),activation='relu',padding='same',name='conv1_2')(net['conv1_1'])
-    net['pool1'] = MaxPooling2D((2, 2), strides=(2, 2), padding='same',name='pool1')(net['conv1_2'])
-    # Block 2
-    net['conv2_1'] = Conv2D(128, (3, 3),activation='relu',padding='same',name='conv2_1')(net['pool1'])
-    net['conv2_2'] = Conv2D(128, (3, 3),activation='relu',padding='same',name='conv2_2')(net['conv2_1'])
-    net['pool2'] = MaxPooling2D((2, 2), strides=(2, 2), padding='same',name='pool2')(net['conv2_2'])
-    # Block 3
-    net['conv3_1'] = Conv2D(256,(3, 3),activation='relu',padding='same',name='conv3_1')(net['pool2'])
-    net['conv3_2'] = Conv2D(256,(3, 3),activation='relu',padding='same',name='conv3_2')(net['conv3_1'])
-    net['conv3_3'] = Conv2D(256,(3, 3),activation='relu',padding='same',name='conv3_3')(net['conv3_2'])
-    net['pool3'] = MaxPooling2D((2, 2), strides=(2, 2), padding='same',name='pool3')(net['conv3_3'])
+    vgg16_input_shape = (224, 224, 3)
+
+    net = {}
+    net['input'] = Input(input_shape)
+    vgg16 = VGG16(input_shape=vgg16_input_shape, include_top=False, weights='imagenet')
+    FeatureExtractor = Model(inputs=vgg16.input, outputs=vgg16.get_layer('block3_pool').output)
+
+    net['pool3'] = FeatureExtractor(net['input'])
     # Block 4
     net['conv4_1'] = Conv2D(512, (3, 3),activation='relu',padding='same',name='conv4_1')(net['pool3'])
     net['conv4_2'] = Conv2D(512, (3, 3),activation='relu',padding='same',name='conv4_2')(net['conv4_1'])
@@ -57,7 +51,7 @@ def SSD(input_shape, num_classes):
     net['conv5_3'] = Conv2D(512, (3, 3),activation='relu',padding='same',name='conv5_3')(net['conv5_2'])
     net['pool5'] = MaxPooling2D((3, 3), strides=(1, 1), padding='same',name='pool5')(net['conv5_3'])
     # FC6
-    net['fc6'] = AtrousConvolution2D(1024, (3, 3), atrous_rate=(6, 6),activation='relu', padding='same',name='fc6')(net['pool5'])
+    net['fc6'] = Conv2D(1024, (3, 3), dilation_rate=(6, 6),activation='relu', padding='same',name='fc6')(net['pool5'])
     net['drop6'] = Dropout(0.5, name='drop6')(net['fc6'])
     # FC7
     net['fc7'] = Conv2D(1024, (1, 1), activation='relu',padding='same', name='fc7')(net['drop6'])
