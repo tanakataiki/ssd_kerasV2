@@ -34,7 +34,8 @@ https://drive.google.com/open?id=189CbTHDX8gMkw6lR4ML1ZQr2h5ukq50-
 
 
 ## Requirements
-This code was tested with `Keras` v2.1.5, `Tensorflow` v1.6.0
+This code was tested with `Keras` v2.1.5, `Tensorflow` v1.6.0  GTX1080
+
 Tensorflow・Keras・Numpy・Scipy・opencv-python・pillow・matplotlib・h5py
 
 ## Installation
