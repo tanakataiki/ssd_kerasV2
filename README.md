@@ -14,7 +14,9 @@ Coming Soon below
 
 VGG19-SSD300
 
-VGG16-SSD512
+#VGG16-SSD512
+
+![VGG16-SSD512(Not yet completed training)](https://github.com/tanakataiki/ssd_kerasV2/blob/master/example/VGG16-SSD512.gif)
 
 FeatureFused-SSD300
 
