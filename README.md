@@ -21,6 +21,8 @@ VGG19-SSD300
 
 FeatureFused-SSD300
 
+![FeatureFused-SSD300](https://github.com/tanakataiki/ssd_kerasV2/blob/master/example/FeatureFused-SSD.gif)
+
 Xcception-SSD300(TanakaOriginalVer)
 
 MobileNetV2-SSD300(Maybe...)
@@ -29,12 +31,9 @@ MobileNetV2-SSD300(Maybe...)
 ## Weights Are Available From Here
 MobileNet-SSD300
 
-https://drive.google.com/open?id=1XVCVA1nHq0yrpBdUOrpJIQhSsIYxdD5y
-
 VGG16-SSD300
 
-https://drive.google.com/open?id=189CbTHDX8gMkw6lR4ML1ZQr2h5ukq50-
-
+https://drive.google.com/drive/u/0/folders/1F8GjD3BFhf_hv9Ipez0twRptYc3P8YwP
 
 ## Requirements
 This code was tested with `Keras` v2.1.5, `Tensorflow` v1.6.0  GTX1080
