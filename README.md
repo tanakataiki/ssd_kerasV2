@@ -33,9 +33,11 @@ MobileNet-SSD300
 
 VGG16-SSD300
 
+FeatureFused-SSD300
+
 https://drive.google.com/drive/u/0/folders/1F8GjD3BFhf_hv9Ipez0twRptYc3P8YwP
 
-## it's very WELCOME to upload your fine tuned weights
+## It's very WELCOME to upload your fine tuned weights
 Please write loss, acc and if possible mAp and your name if you want as your weight name
 
 https://drive.google.com/drive/folders/1u-INV0pNjSjwNgbupXVpr1lwEsTMKW3F?usp=sharing
