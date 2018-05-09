@@ -61,7 +61,7 @@ SSD : https://github.com/rykov8/ssd_keras/blob/master/ssd.py
 
 Caffe : https://github.com/weiliu89/caffe/tree/ssd
 
-SSD : https : //arxiv.org/abs/1512.02325
+SSD : https://arxiv.org/abs/1512.02325
 
 FSSD : https://arxiv.org/abs/1712.00960
 
