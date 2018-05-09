@@ -87,6 +87,8 @@ MobileNet-SSD : https://qiita.com/tanakataiki/items/41509e1b0f4a9dcd01b1
 
 FeatureFused-SSD : https://qiita.com/tanakataiki/items/36e71e7d2f5705bd98bb
 
+Xception-SSDLite : https://qiita.com/tanakataiki/items/63fa46f529174d8e4c03
+
 # Licence
 The MIT License (MIT)
 
