@@ -15,7 +15,6 @@ NUM_CLASSES = len(class_names)
 model = SSD(input_shape, num_classes=NUM_CLASSES)
 
 # Change this path if you want to use your own trained weights
-model.summary()
 model.load_weights('./MobileNetSSD300weights_voc_2007_class20.hdf5')
         
 vid_test = VideoTest(class_names, model, input_shape)
