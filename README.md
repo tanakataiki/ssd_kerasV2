@@ -20,7 +20,7 @@
 
 ### Xcception-SSDLite
 
-![FeatureFused-SSD300](https://github.com/tanakataiki/ssd_kerasV2/blob/master/example/Xception-SSDLite.gif)
+![Xception-SSDLite](https://github.com/tanakataiki/ssd_kerasV2/blob/master/example/Xception-SSDLite.gif)
 
 ### MobileNetV2-SSDLite
 
