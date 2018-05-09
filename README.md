@@ -18,7 +18,7 @@
 
 ![FeatureFused-SSD300](https://github.com/tanakataiki/ssd_kerasV2/blob/master/example/FeatureFused-SSD.gif)
 
-### Xcception-SSDLite
+### Xception-SSDLite (Tanaka Original Ver)
 
 ![Xception-SSDLite](https://github.com/tanakataiki/ssd_kerasV2/blob/master/example/Xception-SSDLite.gif)
 
@@ -61,7 +61,7 @@ SSD : https://github.com/rykov8/ssd_keras/blob/master/ssd.py
 
 Caffe : https://github.com/weiliu89/caffe/tree/ssd
 
-SSD:https : //arxiv.org/abs/1512.02325
+SSD : https : //arxiv.org/abs/1512.02325
 
 FSSD : https://arxiv.org/abs/1712.00960
 
