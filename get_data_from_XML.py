@@ -90,6 +90,6 @@ class XML_preprocessor(object):
 
 ## example on how to use it
 import pickle
-data = XML_preprocessor('./../../../PASCAL_VOC/Annotations/net_personsoccer/').data
-pickle.dump(data,open('./../net_personsoccer.pkl','wb'))
+data = XML_preprocessor('./path2yourXMLFiles').data
+pickle.dump(data,open('./voc_2007.pkl','wb'))
 
