@@ -44,7 +44,7 @@ def preprocess_input(x):
 
 def _conv_block(inputs, filters, alpha, kernel=(3, 3), strides=(1, 1)):
     
-    channel_axis = 1
+    channel_axis = -1
     filters = int(filters * alpha)
     x = ZeroPadding2D(padding=(1, 1), name='conv1_pad')(inputs)
     x = Conv2D(filters, kernel,padding='valid',use_bias=False,strides=strides,name='conv1')(x)
@@ -55,7 +55,7 @@ def _conv_block(inputs, filters, alpha, kernel=(3, 3), strides=(1, 1)):
 def _depthwise_conv_block(inputs, pointwise_conv_filters, alpha,
                           depth_multiplier=1, strides=(1, 1), block_id=1):
     
-    channel_axis = 1 if K.image_data_format() == 'channels_first' else -1
+    channel_axis = -1
     pointwise_conv_filters = int(pointwise_conv_filters * alpha)
 
     x = ZeroPadding2D(padding=(1, 1), name='conv_pad_%d' % block_id)(inputs)
@@ -67,7 +67,7 @@ def _depthwise_conv_block(inputs, pointwise_conv_filters, alpha,
     return Activation(relu6, name='conv_pw_%d_relu' % block_id)(x)
 
 def _depthwise_conv_block_f(inputs, depth_multiplier=1, strides=(1, 1), block_id=1):
-    channel_axis = 1
+    channel_axis = -1
     x = ZeroPadding2D(padding=(1, 1), name='conv_pad_%d'  % block_id)(inputs)
     x = DepthwiseConv2D((3, 3),padding='valid',depth_multiplier=depth_multiplier,strides=strides,use_bias=False,name='conv_dw_%d' % block_id)(x)
     x = BatchNormalization(axis=channel_axis, name='conv_dw_%d_bn' % block_id)(x)
@@ -75,14 +75,14 @@ def _depthwise_conv_block_f(inputs, depth_multiplier=1, strides=(1, 1), block_id
 
 
 def _conv_blockSSD_f(inputs, filters, alpha, kernel, strides,block_id=11):
-    channel_axis = 1
+    channel_axis = -1
     filters = int(filters * alpha)
     Conv = Conv2D(filters, kernel,padding='valid',use_bias=False,strides=strides,name='conv__%d' % block_id)(inputs)
     x = BatchNormalization(axis=channel_axis, name='conv_%d_bn' % block_id)(Conv)
     return Activation(relu6, name='conv_%d_relu' % block_id)(x),Conv
 
 def _conv_blockSSD(inputs, filters, alpha,block_id=11):
-    channel_axis = 1
+    channel_axis = -1
     filters = int(filters * alpha)
     x = ZeroPadding2D(padding=(1, 1), name='conv_pad_%d_1' % block_id)(inputs)
     x = Conv2D(filters, (1,1),padding='valid',use_bias=False,strides=(1, 1),name='conv__%d_1'%block_id)(x)
