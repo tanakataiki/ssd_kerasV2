@@ -25,6 +25,9 @@
 ### MobileNetV2-SSDLite
 
 
+Video is from free to use 
+https://www.pexels.com/video/a-day-in-the-park-1466210/
+
 ## My Weights Are Available From Here
 MobileNet-SSD300
 
