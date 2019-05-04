@@ -99,3 +99,9 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+get_data_from_XML\.py
+
+*.mp4
+
+*.hdf5

@@ -15,7 +15,6 @@ from keras.layers import Reshape
 from keras.layers import ZeroPadding2D
 from keras.models import Model
 
-from keras.applications.mobilenet import relu6
 
 from ssd_layers import Normalize
 from ssd_layers import PriorBox
