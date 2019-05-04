@@ -28,35 +28,25 @@
 Video is from free to use 
 https://www.pexels.com/video/a-day-in-the-park-1466210/
 
-## My Weights Are Available From Here
-MobileNet-SSD300
-
-VGG16-SSD300
-
-FeatureFused-SSD300
-
-https://drive.google.com/drive/u/0/folders/1F8GjD3BFhf_hv9Ipez0twRptYc3P8YwP
-
-## It's very WELCOME to upload your fine tuned weights
-Please write loss, acc and if possible mAp and your name if you want as your weight name
-
-https://drive.google.com/drive/folders/1u-INV0pNjSjwNgbupXVpr1lwEsTMKW3F?usp=sharing
-
+I set threshold 0.9 to ignore wrong detection but usually thresh=0.6
+So Please do not try this at home(this doesnt affect loss or map at all)
 
 
 ## Requirements
 This code was tested with `Keras` v2.1.5, `Tensorflow` v1.6.0  GTX1080
-
 Tensorflow・Keras・Numpy・Scipy・opencv-python・pillow・matplotlib・h5py
 
-## Installation
-pip install --upgrade tensorflow-gpu
 
-conda install numpy
+## My Weights Are Available From Here and WELCOME to upload your fine tuned weights
+https://drive.google.com/drive/u/0/folders/1F8GjD3BFhf_hv9Ipez0twRptYc3P8YwP
 
-conda install scipy
+Please write loss, acc and if possible mAp and your name if you want as your weight name
+https://drive.google.com/drive/folders/1u-INV0pNjSjwNgbupXVpr1lwEsTMKW3F?usp=sharing
 
-pip install --upgrade keras opencv-python pillow matplotlib h5py
+## Pull Request Is always welcome
+As the truely perfect model doesn't exist forever there is still a way better.
+(currently I don't have enought time to search very deep into details too...)
+
 
 
 ## Reference

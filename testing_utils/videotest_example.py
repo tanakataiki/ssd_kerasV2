@@ -5,7 +5,11 @@ from videotest import VideoTest
 import sys
 sys.path.append("..")
 
-model_name="FeatureFusedSSD300"
+model_name="VGG16SSD512"
+
+if model_name=="VGG16SSD512":
+    from model.ssd512VGG16 import SSD
+    weight_name='VGG16SSD512weights_voc_2007_class20.hdf5'
 
 if model_name=="VGG16SSD300":
     from model.ssd300VGG16 import SSD
