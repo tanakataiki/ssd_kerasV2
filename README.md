@@ -47,7 +47,12 @@ https://drive.google.com/drive/folders/1u-INV0pNjSjwNgbupXVpr1lwEsTMKW3F?usp=sha
 As the truely perfect model doesn't exist forever there is still a way better.
 (currently I don't have enought time to search very deep into details too...)
 
-
+## To Whom
+I use this for a detection of few categories and simple shape detection (for my purpose) but weak for coco or voc.
+This repository is just for my study of network architecture. 
+So there is no measurement but for gif so dont trust too much. 
+If you would like to use better and prooved one ,please use official version of ssd or yolo. 
+If you want to study architecture itself without training technic ,this repo will  be good to be as one of many references.
 
 ## Reference
 SSD : https://github.com/rykov8/ssd_keras/blob/master/ssd.py
