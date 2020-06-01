@@ -69,7 +69,7 @@ DSSD : https://arxiv.org/abs/1701.06659
 
 VGG : https://arxiv.org/abs/1409.1556
 
-MoileNet : https://arxiv.org/abs/1704.04861
+MobileNet : https://arxiv.org/abs/1704.04861
 
 MobileNetV2 : https://arxiv.org/abs/1801.04381
 
